@@ -1,0 +1,95 @@
+.navbar {
+    width: 100%;
+    color: white;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+
+    &.scrolled {
+        background-color: var(--main-color);
+    }
+
+    .container {
+        padding: 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 25px;
+                margin-right: 40px;
+            }
+
+            span {
+                margin-right: 20px;
+                cursor: pointer;
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+
+            .search {
+                display: none;
+
+                input {
+                    background-color: transparent;
+                    color: rgb(255, 255, 255);
+                    width: 120px;
+                    height: 22px;
+                    padding: 2px;
+                    padding-left: 12px;
+                    border: 2px solid rgb(255, 255, 255);
+                    border-radius: 12px;
+                }
+
+                .icon {
+                    margin: 0 15px;
+                    cursor: pointer;
+                }
+            }
+
+            .icon {
+                margin: 0 15px;
+                cursor: pointer;
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+
+            .profile {
+                .options {
+                    display: none;
+                    background-color: var(--main-color);
+                    border-radius: 5px;
+                }
+
+                span {
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+                &:hover {
+                    .options {
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}

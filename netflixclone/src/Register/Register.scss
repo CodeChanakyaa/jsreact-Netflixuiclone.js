@@ -1,0 +1,103 @@
+.register {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%), url("https://assets.nflxext.com/ffe/siteui/vlv3/fc164b4b-f085-44ee-bb7f-ec7df8539eff/d23a1608-7d90-4da1-93d6-bae2fe60a69b/IN-en-20230814-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+    background-size: cover;
+    position: relative;
+
+    .top {
+        .wrapper {
+            padding: 28px 180px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .logo {
+                height: 40px;
+            }
+
+            .login-button {
+                background-color: rgb(255, 0, 0);
+                border: none;
+                color: white;
+                border-radius: 5px;
+                padding: 5px 15px;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(223, 0, 0);
+                }
+            }
+
+        }
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: white;
+
+        h1 {
+            font-size: 50px;
+        }
+
+        h2 {
+            margin: 20px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .input {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            height: 50px;
+            border-radius: 5px;
+
+            input {
+                flex: 8;
+                background-color: rgba(166, 166, 166, 0.155);
+                height: 100%;
+                border: 1px solid gray;
+                border-radius: 5px;
+                padding: 0 10px;
+                margin-right: 6px;
+                padding-left: 16px;
+                font-size: 16px;
+
+                &::placeholder {
+                    color: lightgray;
+                }
+            }
+
+            .register-button {
+                flex: 4;
+                height: 100%;
+                background-color: red;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-size: 22px;
+                font-weight: 600;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: rgb(223, 0, 0);
+                }
+            }
+        }
+    }
+}
