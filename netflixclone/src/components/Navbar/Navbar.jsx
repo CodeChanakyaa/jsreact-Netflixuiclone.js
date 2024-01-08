@@ -3,6 +3,7 @@ import './Navbar.scss';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -49,13 +50,13 @@ const Navbar = () => {
 
                     <span>a__fgDxcHuv</span>
                     <NotificationsIcon className='icon' />
-                    <img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="" />
+                    <Link to="/register"><img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="" /></Link>
 
                     <div className="profile">
                         <ArrowDropDownIcon className='icon' />
                         <div className="options">
                             <span>Settings</span>
-                            <span>Logout</span>
+                            <Link to="/login"><span>Logout</span></Link>
                         </div>
                     </div>
 
