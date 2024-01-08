@@ -1,8 +1,10 @@
 import React, { useRef, useState } from 'react';
 import './Register.scss';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
+
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +25,7 @@ const Register = () => {
       <div className="top">
         <div className="wrapper">
           <img className='logo' src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/330px-Netflix_2015_logo.svg.png" alt="" />
-          <Link to="/login" ><button className='login-button'>Sign In</button></Link>
+          <button className='login-button' onClick={() => navigate("/login")}>Sign In</button>
         </div>
       </div>
 

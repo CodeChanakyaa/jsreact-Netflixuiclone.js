@@ -3,9 +3,11 @@ import './Navbar.scss';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+
+    const navigate = useNavigate();
 
     const [scrolled, setScrolled] = useState(false)
 
@@ -50,13 +52,13 @@ const Navbar = () => {
 
                     <span>a__fgDxcHuv</span>
                     <NotificationsIcon className='icon' />
-                    <Link to="/register"><img src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="" /></Link>
+                    <img onClick={() => navigate("/register")} src="https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt="" />
 
                     <div className="profile">
                         <ArrowDropDownIcon className='icon' />
                         <div className="options">
                             <span>Settings</span>
-                            <Link to="/login"><span>Logout</span></Link>
+                            <span onClick={() => navigate("/login")}>Logout</span>
                         </div>
                     </div>
 
